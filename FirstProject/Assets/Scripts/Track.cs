@@ -2,11 +2,11 @@
 using System.Collections;
 
 
-public class TrackCubey : MonoBehaviour {
+public class Track : MonoBehaviour {
 	public GameObject target;
-	public float xOffset = -4;
-	public float yOffset = 4;
-	public float zOffset = -4;
+	public float xOffset;
+	public float yOffset;
+	public float zOffset;
 	// Use this for initialization
 	void Start () {
 		gameObject.transform.position = new Vector3 (target.transform.position.x + xOffset,
