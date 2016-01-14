@@ -9,20 +9,20 @@ public class CharacterMover : MonoBehaviour {
 	void Start() {
 	}
 	void Update() {
-		int leftOrRight = 0;
+//		int leftOrRight = 0;
 		CharacterController controller = GetComponent<CharacterController>();
 		if (controller.isGrounded) {
-			//moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-			if (Input.GetKey ("d")) {
-				Debug.Log ("D Pressed");
-				leftOrRight++;
-			}
-			if (Input.GetKey ("a")) {
-				Debug.Log ("A Pressed");
-				leftOrRight--;
-			}
-			Debug.Log ("leftOrRight is" + leftOrRight);
-			moveDirection = new Vector3 (leftOrRight, 0, Input.GetAxis ("Vertical"));
+			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+//			if (Input.GetKey ("d")) {
+//				Debug.Log ("D Pressed");
+//				leftOrRight++;
+//			}
+//			if (Input.GetKey ("a")) {
+//				Debug.Log ("A Pressed");
+//				leftOrRight--;
+//			}
+//			Debug.Log ("leftOrRight is" + leftOrRight);
+//			moveDirection = new Vector3 (leftOrRight, 0, Input.GetAxis ("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= speed;
 			if (Input.GetButton ("Jump")) {

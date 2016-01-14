@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\IsoMetricView.cs" />
+     <Compile Include="Assets\ResetTo0.cs" />
      <Compile Include="Assets\Scripts\CharacterMover.cs" />
      <Compile Include="Assets\Scripts\SpriteController.cs" />
      <Compile Include="Assets\Scripts\Track.cs" />
