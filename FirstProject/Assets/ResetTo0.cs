@@ -12,7 +12,7 @@ public class ResetTo0 : MonoBehaviour {
 	void Update () {
 		if (gameObject.transform.position.y < 0) {
 			Debug.Log ("in air, save!");
-			var reset = new Vector3 (0, 2, 0);
+			var reset = new Vector3 (0, 10, 0);
 			gameObject.transform.position = reset;
 		}
 	
