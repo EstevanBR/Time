@@ -1,8 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WASDMove.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ResetTo0.cs">
     <Files>
+      <File FileName="Assets/Scripts/CharacterMover.cs" Line="12" Column="3" />
       <File FileName="Assets/Scripts/WASDMove.cs" Line="5" Column="4" />
+      <File FileName="Assets/Scripts/Track.cs" Line="31" Column="1" />
+      <File FileName="Assets/IsoMetricView.cs" Line="5" Column="2" />
+      <File FileName="Assets/ResetTo0.cs" Line="15" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

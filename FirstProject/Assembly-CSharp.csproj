@@ -45,12 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\IsoMetricView.cs" />
-     <Compile Include="Assets\ResetTo0.cs" />
      <Compile Include="Assets\Scripts\CharacterMover.cs" />
-     <Compile Include="Assets\Scripts\SpriteController.cs" />
+     <Compile Include="Assets\Scripts\ResetTo0.cs" />
      <Compile Include="Assets\Scripts\Track.cs" />
-     <Compile Include="Assets\Scripts\WASDMove.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
