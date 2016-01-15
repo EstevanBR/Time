@@ -17,7 +17,7 @@ public class CharacterMover : MonoBehaviour {
 		public bool record;
 		public bool play;
 	}
-	public Vector3[] locationHistory = new Vector3[0];
+	//public Vector3[] locationHistory;
 	public stateStruct bunnyState;
 	private Vector3 moveDirection = Vector3.zero;
 	void Start() {
@@ -26,12 +26,13 @@ public class CharacterMover : MonoBehaviour {
 		bunnyState.play = false;
 		myLifeInfo.birthFrame = Time.frameCount;
 		myLifeInfo.lifeFrames = 0;
+		//locationHistory = new Vector3[60^3];
 	}
 	void Update() {
 		CharacterController controller = GetComponent<CharacterController>();
 		//if recording to VCR
 		if (bunnyState.record && !bunnyState.play && !bunnyState.pause) {
-			
+			myLifeInfo.lifeFrames++;
 			if (controller.isGrounded) {
 				moveDirection = new Vector3(-Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 				moveDirection = transform.TransformDirection(moveDirection);
@@ -46,9 +47,7 @@ public class CharacterMover : MonoBehaviour {
 			}
 			moveDirection.y -= gravity * Time.deltaTime;
 			controller.Move(moveDirection * Time.deltaTime);
-			locationHistory = new Vector3[myLifeInfo.lifeFrames];
-			locationHistory [myLifeInfo.lifeFrames] = gameObject.transform.position;
-			myLifeInfo.lifeFrames++;
+			//locationHistory [myLifeInfo.lifeFrames] = gameObject.transform.position;
 		}
 		//if playing VCR
 		if (!bunnyState.record && bunnyState.play && !bunnyState.pause) {
@@ -58,8 +57,6 @@ public class CharacterMover : MonoBehaviour {
 		if (!bunnyState.record && !bunnyState.play && bunnyState.pause) {
 
 		}
-
-
-
+		//Debug.Log ("locationHistory[] size is " + locationHistory.Length + "\nmyLifeInfo.lifeFrames is" + myLifeInfo.lifeFrames);
 	}
 }
