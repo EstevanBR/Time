@@ -14,14 +14,15 @@ public class Track : MonoBehaviour {
 	public float yRotate;
 
 	bool rotate;
+	void Awake() {
+		//Application.targetFrameRate = 60;
+		Debug.Log ("target.FrameRate is now" + Application.targetFrameRate);
+	}
 
 	void Update () {
 	}
 
 	void LateUpdate() {
-//		gameObject.transform.position = new Vector3 (target.transform.position.x + xOffset,
-//			target.transform.position.y + yOffset,
-//			target.transform.position.z + zOffset);
 		if (Input.GetKeyDown ("o")) {
 			rotate = rotate ? false : true;
 			Debug.Log ("rotate is:" + rotate);
